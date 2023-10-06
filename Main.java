@@ -32,8 +32,7 @@ public class Main {
         System.out.println(" How many miles did you travel? ");
         double numOfMiles = scanner.nextDouble();
         System.out.println(" Ahh I understand.");
-        double num = miles + feeForMiles;
-        double total = num * qty;
+
 
         if (miles >=0 && miles < 5 ){
             feeForMiles = 2;
@@ -43,12 +42,11 @@ public class Main {
             feeForMiles = 10;
         }else if (miles >=26 && miles < 50 ){
             feeForMiles = 15;
-        }else {
-            feeForMiles = 20;        }
-
+        }else {feeForMiles = 20;}
+        double total = (feeForMiles * miles) + (qty * feeForMiles);
         System.out.println(" Product      Qty      Price       Miles      Total");
 
-        System.out.println(" "+product + "         " + qty + "       "  + feeForMiles + "        " + miles +  "       "  + total);
+        System.out.println(" "+ product + "         " + qty + "       "  + feeForMiles + "        " + numOfMiles +  "       "  + total);
 
         System.out.println("-------      -----     ------      ------     --------");
 
